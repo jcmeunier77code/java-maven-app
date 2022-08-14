@@ -56,7 +56,7 @@ pipeline {
                         sh 'git config user.name jcmeunier77code'
 
                         sh "cat $keyfile"
-                        sh "ssh-add <(echo $keyfile)"
+                        sh "echo $keyfile > ~/.ssh/id_rsa.pub"
                         sh 'git status'
                         sh 'git branch'
                         sh 'git config --list'
