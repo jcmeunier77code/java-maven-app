@@ -57,6 +57,7 @@ pipeline {
 
                         sh "cat $keyfile"
                         sh "echo $keyfile > ~/.ssh/id_rsa.pub"
+                        sh "cat ~/.ssh/id_rsa.pub"
                         sh 'git status'
                         sh 'git branch'
                         sh 'git config --list'
