@@ -7,7 +7,7 @@ pipeline {
 
     stages {
 
-            stage("increment version") {
+        stage("increment version") {
 
                         steps {
             		        script {
@@ -22,7 +22,6 @@ pipeline {
                         }
                     }
 
-    stages {
 
         stage("build jar") {
 
