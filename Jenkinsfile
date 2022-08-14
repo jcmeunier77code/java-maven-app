@@ -55,6 +55,8 @@ pipeline {
                         sh 'git config user.email "jcmeunier77code@gmail.com"'
                         sh 'git config user.name jcmeunier77code'
 
+                        sh "cat $keyfile"
+
                         sh 'git status'
                         sh 'git branch'
                         sh 'git config --list'
