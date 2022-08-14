@@ -52,8 +52,8 @@ pipeline {
             steps {
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: "da38a375-03b3-4b5f-91af-f50d2a0665b9", keyFileVariable: 'keyfile')]) {
-                        sh 'git config user.email "jcmeunier77code@gmail.com"'
-                        sh 'git config user.name jcmeunier77code'
+                        sh 'git config user.email "jenkins@example.com"'
+                        sh 'git config user.name "jenkins"'
 
                         sh "cat $keyfile"
                         sh "echo $keyfile > ~/.ssh/id_rsa.pub"
