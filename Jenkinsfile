@@ -56,7 +56,7 @@ pipeline {
                         sh 'git config user.name "jenkins"'
 
                         sh "cat $keyfile"
-                        sh "echo $keyfile > ~/.ssh/id_rsa.pub"
+                        sh "echo '$keyfile' > ~/.ssh/id_rsa.pub"
                         sh "cat ~/.ssh/id_rsa.pub"
                         sh 'git status'
                         sh 'git branch'
