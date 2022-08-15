@@ -51,17 +51,17 @@ pipeline {
         stage("commit version update") {
             steps {
                 script {
-//                     withCredentials([sshUserPrivateKey(credentialsId: "da38a375-03b3-4b5f-91af-f50d2a0665b9", keyFileVariable: 'keyfile')]) {
-                    sshagent(['da38a375-03b3-4b5f-91af-f50d2a0665b9']) {
-                        sh '''
-                            [ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0700 ~/.ssh
-                            ssh-keyscan -t rsa,dsa example.com >> ~/.ssh/known_hosts
-                            ssh user@example.com ...
-                           '''
+                    withCredentials([sshUserPrivateKey(credentialsId: "da38a375-03b3-4b5f-91af-f50d2a0665b9", keyFileVariable: 'keyfile')]) {
+//                     sshagent(['da38a375-03b3-4b5f-91af-f50d2a0665b9']) {
+//                         sh '''
+//                             [ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0700 ~/.ssh
+//                             ssh-keyscan -t rsa,dsa example.com >> ~/.ssh/known_hosts
+//                             ssh user@example.com ...
+//                            '''
 
                         sh 'git config user.email "jenkins@example.com"'
                         sh 'git config user.name "jenkins"'
-
+                        sh 'GIT_SSH_COMMAND = "ssh -i $keyfile"'
 //                         sh "cat $keyfile"
 //                         sh "echo '$keyfile' > ~/.ssh/id_rsa.pub"
 //                         sh "cat ~/.ssh/id_rsa.pub"
