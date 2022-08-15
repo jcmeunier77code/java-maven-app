@@ -61,7 +61,7 @@ pipeline {
 
                         sh 'git config user.email "jenkins@example.com"'
                         sh 'git config user.name "jenkins"'
-                        sh 'GIT_SSH_COMMAND = "ssh -i $keyfile"'
+                        sh "GIT_SSH_COMMAND = 'ssh -i $keyfile'"
 //                         sh "cat $keyfile"
 //                         sh "echo '$keyfile' > ~/.ssh/id_rsa.pub"
 //                         sh "cat ~/.ssh/id_rsa.pub"
