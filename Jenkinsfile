@@ -59,11 +59,11 @@ pipeline {
 //                             ssh user@example.com ...
 //                            '''
                     sshagent(['jenkins']) {
-                        sh("""
-                            #!/usr/bin/env bash
-                            set +x
-                            export GIT_SSH_COMMAND="ssh -oStrictHostKeyChecking=no"
-                            """)
+//                         sh("""
+//                             #!/usr/bin/env bash
+//                             set +x
+//                             export GIT_SSH_COMMAND="ssh -oStrictHostKeyChecking=no"
+//                             """)
                         sh 'git config user.email "jenkins@example.com"'
                         sh 'git config user.name "jenkins"'
 //                         sh "GIT_SSH_COMMAND = 'ssh -i $keyfile'"
