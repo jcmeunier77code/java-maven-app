@@ -58,7 +58,7 @@ pipeline {
 //                             ssh-keyscan -t rsa,dsa example.com >> ~/.ssh/known_hosts
 //                             ssh user@example.com ...
 //                            '''
-                    sshagent(['da38a375-03b3-4b5f-91af-f50d2a0665b9']) {
+                    sshagent(['jenkins']) {
                         sh("""
                             #!/usr/bin/env bash
                             set +x
