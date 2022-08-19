@@ -64,8 +64,8 @@ pipeline {
 //                             set +x
 //                             export GIT_SSH_COMMAND="ssh -oStrictHostKeyChecking=no"
 //                             """)
-                        sh 'git config user.email "jenkins@example.com"'
-                        sh 'git config user.name "jenkins"'
+                        sh 'git config user.email "jcmeunier77code@gmail.com"'
+                        sh 'git config user.name "jcmeunier77code"'
 //                         sh "GIT_SSH_COMMAND = 'ssh -i $keyfile'"
 //                         sh "cat $keyfile"
 //                         sh "echo '$keyfile' > ~/.ssh/id_rsa.pub"
